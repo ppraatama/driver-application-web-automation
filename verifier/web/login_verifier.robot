@@ -14,3 +14,18 @@ Verify Login Button Disabled
     ...    ${LOGIN_BUTTON}
     ...    disabled
     ...    timeout=10s
+
+Verify Help Modal Opened
+    Wait For Elements State
+    ...    ${HELP_MODAL_TITLE}
+    ...    visible
+
+Verify Helpdesk Email Correct
+    Wait For Elements State
+    ...    ${HELP_MODAL_EMAIL}
+    ...    visible
+
+Verify Butuh Bantuan Button Appear
+    Wait For Elements State
+    ...     ${BUTUH_BANTUAN_BUTTON}
+    ...     visible
