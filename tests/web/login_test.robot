@@ -21,7 +21,9 @@ Login Driver Successfully
     Click Login Button Element
     ${response}=    Wait For    ${promise}
     Validate Login Response Success    ${response}
-    Verify Dashboard Loaded
+    Verify Dashboard Driver Apps Portal Loaded
+    Verify Dashboard URL Loaded
+    Verify All Menu Loaded
 
 Login With Wrong Username
     [Tags]    Smoke    Negative
@@ -61,3 +63,18 @@ Driver Success See Butuh Bantuan Popup
     Click Butuh Bantuan Button
     Verify Help Modal Opened
     Verify Helpdesk Email Correct
+
+Driver Success Logout
+    [Tags]      Smoke   Positive
+
+    ${promise}=    Promise To    Wait For Response    matcher=**/token/auth*
+    Login With Credentials      ${DRIVER_USERNAME}    ${DRIVER_PASSWORD}
+    Click Login Button Element
+    ${response}=    Wait For    ${promise}
+    Validate Login Response Success    ${response}
+    Verify Dashboard Driver Apps Portal Loaded
+    Verify Dashboard URL Loaded
+    Verify All Menu Loaded
+    Click Logout Button
+    Verify Driver Successfully Logout
+    Verify Dashboard Login URL Loaded

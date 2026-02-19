@@ -17,3 +17,34 @@ Verify Dashboard URL Loaded
     Should Be Equal
     ...    ${url}
     ...    https://stg-driverappsportal.bluebird.id//
+
+Verify All Menu Loaded
+    Wait For Elements State
+    ...    ${ACCOUNT_BUTTON}
+    ...    visible
+    ...    timeout=${TIMEOUT}
+
+    Wait For Elements State
+    ...    ${MANAJEMEN_PESAN_BUTTON}
+    ...    visible
+    ...    timeout=${TIMEOUT}
+
+    Wait For Elements State
+    ...    ${PEMANTAUAN_BUTTON}
+    ...    visible
+    ...    timeout=${TIMEOUT}
+
+    Wait For Elements State
+    ...    ${KONFIGURASI_FITUR_DA_BUTTON}
+    ...    visible
+    ...    timeout=${TIMEOUT}
+
+    Wait For Elements State
+    ...    ${REPORTING_BUTTON}
+    ...    visible
+    ...    timeout=${TIMEOUT}
+
+    Wait For Elements State
+    ...    ${MANAJEMEN_ROLE_BUTTON}
+    ...    visible
+    ...    timeout=${TIMEOUT}
