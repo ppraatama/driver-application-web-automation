@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+venv/
+.env/
+
+# Robot Framework output
+results/
+log.html
+report.html
+output.xml
+output.json
+
+# Screenshots & videos
+*.png
+*.jpg
+*.mp4
+*.webm
+
+# Playwright / Browser library
+playwright-log.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
