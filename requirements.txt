@@ -1,0 +1,3 @@
+#Running berdasarkan environment
+#robot -v ENV:staging -d results tests/
+#robot -v ENV:production -d results tests/
