@@ -53,3 +53,11 @@ Login With Empty Password
 
     Login With Credentials      ${DRIVER_USERNAME}    ${EMPTY}
     Verify Login Button Disabled
+
+Driver Success See Butuh Bantuan Popup
+    [Tags]      Smoke   Positive
+
+    Verify Butuh Bantuan Button Appear
+    Click Butuh Bantuan Button
+    Verify Help Modal Opened
+    Verify Helpdesk Email Correct

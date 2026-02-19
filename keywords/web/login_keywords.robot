@@ -20,8 +20,5 @@ Login With Credentials
 Click Login Button Element
     Click    ${LOGIN_BUTTON}
 
-Verify Login Failed UI
-    Verify Login Failed
-
-Verify Login Button Disabled UI
-    Verify Login Button Disabled
+Click Butuh Bantuan Button
+    Click   ${BUTUH_BANTUAN_BUTTON}
