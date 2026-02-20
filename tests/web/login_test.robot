@@ -3,6 +3,7 @@ Resource    ../../resources/browser/browser_setup.robot
 Resource    ../../keywords/web/login_keywords.robot
 Resource    ../../keywords/web/dashboard_keywords.robot
 Resource    ../../keywords/api/api_validation_keywords.robot
+Resource    ../../keywords/web/auth_session_keywords.robot
 Resource    ../../config/environments/staging.robot
 Resource    ../../variables/credentials.robot
 Resource    ../../helper/utils/utils.robot
@@ -64,17 +65,15 @@ Driver Success See Butuh Bantuan Popup
     Verify Help Modal Opened
     Verify Helpdesk Email Correct
 
-Driver Success Logout
+Driver Logout Using Saved Session
     [Tags]      Smoke   Positive
 
-    ${promise}=    Promise To    Wait For Response    matcher=**/token/auth*
-    Login With Credentials      ${DRIVER_USERNAME}    ${DRIVER_PASSWORD}
-    Click Login Button Element
-    ${response}=    Wait For    ${promise}
-    Validate Login Response Success    ${response}
+    Open Application With Saved Session
+
     Verify Dashboard Driver Apps Portal Loaded
     Verify Dashboard URL Loaded
-    Verify All Menu Loaded
+
     Click Logout Button
+
     Verify Driver Successfully Logout
     Verify Dashboard Login URL Loaded

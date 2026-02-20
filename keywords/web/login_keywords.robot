@@ -22,3 +22,19 @@ Click Login Button Element
 
 Click Butuh Bantuan Button
     Click   ${BUTUH_BANTUAN_BUTTON}
+
+Login Driver Successfully
+    [Arguments]    ${username}    ${password}
+
+    Input Username    ${username}
+    Input Password    ${password}
+
+    ${promise}=    Promise To
+    ...    Wait For Response
+    ...    matcher=**/token/auth*
+
+    Click Login Button Element
+
+    ${response}=    Wait For    ${promise}
+
+    Log    Login API response received
