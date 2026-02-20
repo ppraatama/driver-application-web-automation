@@ -10,7 +10,6 @@ Resource    ../../helper/utils/utils.robot
 
 Suite Setup         Setup Browser
 Test Setup          Open Application
-Test Teardown       Test Cleanup
 Suite Teardown      Close Application
 
 *** Test Cases ***

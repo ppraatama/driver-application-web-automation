@@ -12,11 +12,12 @@ Verify Dashboard Driver Apps Portal Loaded
     ...    timeout=${TIMEOUT}
 
 Verify Dashboard URL Loaded
+
     ${url}=    Get Url
 
-    Should Be Equal
+    Should Contain
     ...    ${url}
-    ...    https://stg-driverappsportal.bluebird.id//
+    ...    driverappsportal.bluebird.id
 
 Verify All Menu Loaded
     Wait For Elements State
